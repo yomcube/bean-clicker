@@ -1,6 +1,6 @@
-var beans = document.getElementById("beans").innerText;
+var beans = 0;
 var amountToYield = 1;
 function click() {
-    var a = parseInt(beans) + amountToYield;
-    beans = a.toString();
+    var a = beans + amountToYield;
+    document.getElementById("beans") = a.toString();
 }
