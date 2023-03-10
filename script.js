@@ -1,6 +1,6 @@
 var beans = 0;
-var amountToYield = 1;
+var amount = 1;
 function clickbean() {
-    beans += amountToYield;
+    beans += amount;
     document.getElementById("beans").innerText = beans.toString();
 }
