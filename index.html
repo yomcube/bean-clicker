@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
     <title>Bean Clicker | An idle game where you click beans.</title>
 </head>
 <body>
@@ -10,7 +11,7 @@
     <img src="assets/beanbutton.png" id="beanbutton" onclick="clickbean()">
     <p><span id="beans">0</span> beans</p>
     <div id="buildings">
-        <button id="farmbutton" onclick="buildings.farm.buy()">Buy 1 Farm</button>
+        <button id="farmbutton" onclick="buildings.farm.buy()">Buy 1 Farm (<span id="farmcost"></span> beans)</button>
     </div>
 </body>
 </html>

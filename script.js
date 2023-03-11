@@ -5,9 +5,12 @@ var buildings = {
     farm: {
         name: "Farm", cost: 75, bPS: 1, count: 0,
         buy: function() {
-            buildings.farm.count += 1;
-            buildings.farm.cost += buildings.farm.cost * 0.15;
-            beansPerSecond += buildings.farm.bPS;
+            if (!beans < this.cost) return;
+            beans -= this.cost;
+            this.count += 1;
+            this.cost += this.cost * 0.15;
+            document.getElementById("farmcost").innerHTML = buildings.farm.cost;
+            beansPerSecond += this.bPS;
         }
     }
 }
@@ -16,7 +19,8 @@ function clickbean() {
     document.getElementById("beans").innerText = beans.toString();
 }
 function update() {
-    beans += beansPerSecond;
+    beans += beansPerSecond / 10;
     document.getElementById("beans").innerText = beans.toString();
 }
-setInterval(update, 1000);
+document.getElementById("farmcost").innerHTML = buildings.farm.cost;
+setInterval(update, 100);
