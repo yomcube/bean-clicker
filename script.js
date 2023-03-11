@@ -21,7 +21,7 @@ function clickbean() {
     document.getElementById("beans").innerText = beans;
 }
 function update() {
-    beans += beansPerSecond / 10;
+    if (!beansPerSecond == 0) beans += beansPerSecond / 10;
     document.getElementById("beans").innerText = beans;
 }
 setInterval(update, 100);
