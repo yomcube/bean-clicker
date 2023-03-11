@@ -5,7 +5,7 @@ var buildings = {
     farm: {
         name: "Farm", cost: 75, bPS: 1, count: 0,
         buy: function() {
-            if (!beans < this.cost) return;
+            if (beans < this.cost) return;
             beans -= this.cost;
             this.count += 1;
             this.cost += this.cost * 0.15;
