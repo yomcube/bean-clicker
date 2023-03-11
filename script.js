@@ -9,7 +9,7 @@ var buildings = {
             beans -= this.cost;
             this.count += 1;
             this.cost += this.cost * 0.15;
-            document.getElementById("farmcost").innerHTML = buildings.farm.cost;
+            document.getElementById("farmcost").innerText = buildings.farm.cost;
             beansPerSecond += this.bPS;
         }
     }
@@ -22,5 +22,5 @@ function update() {
     beans += beansPerSecond / 10;
     document.getElementById("beans").innerText = beans.toString();
 }
-document.getElementById("farmcost").innerHTML = buildings.farm.cost;
+document.getElementById("farmcost").innerText = buildings.farm.cost;
 setInterval(update, 100);
