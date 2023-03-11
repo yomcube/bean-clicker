@@ -17,5 +17,6 @@ function clickbean() {
 }
 function update() {
     beans += beansPerSecond;
+    document.getElementById("beans").innerText = beans.toString();
 }
 setInterval(update, 1000);
