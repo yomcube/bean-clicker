@@ -15,6 +15,7 @@ var buildings = {
         }
     }
 }
+document.getElementById("farmcost").innerText = buildings.farm.cost;
 function clickbean() {
     beans += amountPerClick;
     document.getElementById("beans").innerText = beans;
@@ -23,5 +24,4 @@ function update() {
     beans += beansPerSecond / 10;
     document.getElementById("beans").innerText = beans;
 }
-document.getElementById("farmcost").innerText = buildings.farm.cost;
 setInterval(update, 100);
